@@ -1,8 +1,18 @@
 package com.learnspring.springboot.learnJPAandHibernate.course;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity // -> marks the class as a JPA entity.
 public class Course {
+	
+	@Id // -> Primary Key
 	private int id;
+	
+	//@Column(name="name") -> Matches Column in the database
 	private String name;
+	
+	//@Column(name="author")
 	private String author;
 	
 	@Override
