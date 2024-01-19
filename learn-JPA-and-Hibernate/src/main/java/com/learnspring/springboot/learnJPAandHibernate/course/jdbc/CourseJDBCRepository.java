@@ -34,11 +34,11 @@ public class CourseJDBCRepository {
 				course.getId(), course.getName(),course.getAuthor());
 	}
 	
-	public void delete(int getId) {
+	public void delete(long getId) {
 		springJdbcTemplate.update(DELETE_QUERY, getId);
 	}
 	
-	public Course select(int getId) {
+	public Course select(long getId) {
 		return springJdbcTemplate.queryForObject
 				(SELECT_QUERY, new BeanPropertyRowMapper<>(Course.class), getId);
     //	ResultSet -> Bean -> Using RowMapper

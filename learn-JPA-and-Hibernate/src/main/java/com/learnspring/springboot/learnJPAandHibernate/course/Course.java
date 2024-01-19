@@ -7,7 +7,7 @@ import jakarta.persistence.Id;
 public class Course {
 	
 	@Id // -> Primary Key
-	private int id;
+	private long id;
 	
 	//@Column(name="name") -> Matches Column in the database
 	private String name;
@@ -20,7 +20,7 @@ public class Course {
 		return "Course [id=" + id + ", name=" + name + ", author=" + author + "]";
 	}
 	
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 
@@ -36,14 +36,14 @@ public class Course {
 		
 	}
 	
-	public Course(int id, String name, String author) {
+	public Course(long id, String name, String author) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.author = author;
 	}
 	
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 	
